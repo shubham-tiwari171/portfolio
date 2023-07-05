@@ -1,31 +1,6 @@
 .project-card-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.7rem;
-}
-
-.project-card {
-  width: 380px;
-  position: relative;
-  box-shadow: 0 2px 7px #dfdfdf;
-  margin: 50px auto;
-  background: #fafafa;
-}
-
-.project-tumb {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 300px;
-  padding: 50px;
-  background: #f0f0f0;
-}
-
-.project-tumb img {
-  max-width: 100%;
-  max-height: 100%;
 }
 
 .project-details {
@@ -104,21 +79,10 @@
   padding-top: 1.25rem;
 }
 
-.project-bottom-details div {
-  float: left;
-  width: 100%;
-}
-
 .project-links {
   display: flex;
   justify-content: space-between;
   text-align: right;
-}
-
-.project-bottom-details {
-  overflow: hidden;
-  border-top: 1px solid #eee;
-  padding-top: 20px;
 }
 
 .project-bottom-details div {
@@ -144,4 +108,10 @@
 
 .project-links svg {
   margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    width: 100%;
+  }
 }
