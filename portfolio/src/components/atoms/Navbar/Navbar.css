@@ -1,0 +1,10 @@
+/* Navbar.css */
+.mynavbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  background-color: #161616;
+  color: #fff;
+  padding: 0 20px;
+}
