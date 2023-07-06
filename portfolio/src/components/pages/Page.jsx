@@ -5,7 +5,7 @@ import Home from "../molecule/Home/Home";
 import Education from "../molecule/Education/Education";
 import Skills from "../molecule/Skills/Skills";
 import Projects from "../molecule/Projects/Projects";
-
+import ContactUs from "../molecule/ContactUs/ContactUs";
 const Page = () => {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
@@ -20,23 +20,26 @@ const Page = () => {
     education: educationRef,
     skills: skillsRef,
     projects: projectsRef,
-    contactus: contactusRef,
+    contact: contactusRef,
   };
 
-  const navigateToSection = (link) => {
+  const scrollToSection = (link) => {
     const section = sectionRef[link];
     if (section && section.current) {
-      console.log(section);
       section.current.scrollIntoView({
         behavior: "smooth",
         block: "start",
+        inline: "start",
       });
+      // setTimeout(() => {
+      //   window.scroll(0, window.pageYOffset + 200);
+      // }, 300);
     }
   };
 
   return (
     <>
-      <Navbar navigateToSection={navigateToSection} />
+      <Navbar scrollToSection={scrollToSection} />
       <div className="page-content">
         <section ref={homeRef} id="home" className="section">
           <div className="section-content">
@@ -51,21 +54,27 @@ const Page = () => {
         </section>
         <section ref={educationRef} id="services" className="section">
           <div className="section-content">
+            <h1>Education</h1>
             <Education />
           </div>
         </section>
         <section ref={skillsRef} id="skills" className="section">
           <div className="section-content">
+            <h1>Skills</h1>
             <Skills />
           </div>
         </section>
         <section ref={projectsRef} id="projects" className="section">
           <div className="section-content">
+            <h1>Projects</h1>
             <Projects />
           </div>
         </section>
         <section ref={contactusRef} id="contactus" className="section">
-          <div className="section-content"></div>
+          <div className="section-content">
+            <h1>Contact</h1>
+            <ContactUs />
+          </div>
         </section>
       </div>
     </>

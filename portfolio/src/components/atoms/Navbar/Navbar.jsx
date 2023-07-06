@@ -1,80 +1,178 @@
-import React from "react";
-import "./Navbar.css";
-
-const Navbar = () => {
-  const handleClick = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      window.scrollTo({
-        top: section.offsetTop,
-        behavior: "smooth",
-      });
+import React, { useEffect, useState } from "react";
+import styles from "./Navbar.module.css";
+import { MdFormatAlignRight, MdClose } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
+// import { login, logout } from "../../../redux/reducers/reducers";
+// import { useDispatch, useSelector } from "react-redux";
+const Navbar = ({ scrollToSection }) => {
+  const [toggle, setToggle] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [activeLink, setActiveLink] = useState("Home");
+  const navigate = useNavigate();
+  // const dispatch = useDispatch();
+  // const { isUserLoggedIn } = useSelector((state) => state.user);
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+      if (window.innerWidth > 900) {
+        setToggle(false);
+      }
     }
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  function handleToggle() {
+    setToggle(!toggle);
+  }
+
+  const handleActiveClicked = (link) => {
+    setActiveLink(link);
+    scrollToSection(link.toLowerCase(), -100); // Scroll 100 pixels above the section
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark mynavbar">
-      <a className="navbar-brand" href="#">
-        Navbar
-      </a>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
+    <div className={styles.navbar}>
+      <div
+        className={`d-flex justify-content-center align-items-center ${styles.navbarLeft}`}
       >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div className="navbar-nav">
-          <a
-            className="nav-item nav-link active"
-            href="#home"
-            onClick={() => handleClick("home")}
+        <div className={`${styles.logo}`}>PortFolio</div>
+        {windowWidth < 1100 && (
+          <div
+            className={
+              toggle ? `${styles.menuItems}` : `${styles.menuItemsDisplay}`
+            }
           >
-            Home <span className="sr-only">(current)</span>
-          </a>
-          <a
-            className="nav-item nav-link"
-            href="#about"
-            onClick={() => handleClick("about")}
-          >
-            About
-          </a>
-          <a
-            className="nav-item nav-link"
-            href="#education"
-            onClick={() => handleClick("education")}
-          >
-            Education
-          </a>
-          <a
-            className="nav-item nav-link"
-            href="#skills"
-            onClick={() => handleClick("skills")}
-          >
-            Skills
-          </a>
-          <a
-            className="nav-item nav-link"
-            href="#projects"
-            onClick={() => handleClick("projects")}
-          >
-            Projects
-          </a>
-          <a
-            className="nav-item nav-link"
-            href="#contactus"
-            onClick={() => handleClick("contactus")}
-          >
-            Contact Us
-          </a>
-        </div>
+            <div
+              className={` ${
+                activeLink === "Home" ? `${styles.menuItemsBackground}` : ""
+              }`}
+              onClick={() => handleActiveClicked("Home")}
+            >
+              Home
+            </div>
+            <div
+              className={` ${
+                activeLink === "About" ? `${styles.menuItemsBackground}` : ""
+              }`}
+              onClick={() => handleActiveClicked("About")}
+            >
+              About
+            </div>
+            <div
+              className={` ${
+                activeLink === "Education"
+                  ? `${styles.menuItemsBackground}`
+                  : ""
+              }`}
+              onClick={() => handleActiveClicked("Education")}
+            >
+              Education
+            </div>
+            <div
+              className={` ${
+                activeLink === "Skills" ? `${styles.menuItemsBackground}` : ""
+              }`}
+              onClick={() => handleActiveClicked("Skills")}
+            >
+              Skills
+            </div>
+            <div
+              className={` ${
+                activeLink === "Contact" ? `${styles.menuItemsBackground}` : ""
+              }`}
+              onClick={() => handleActiveClicked("Contact")}
+            >
+              Contact Us
+            </div>
+            {/* <div>
+              <button className={`${styles.joinButton}`}>Join</button>
+            </div> */}
+          </div>
+        )}
       </div>
-    </nav>
+
+      <div
+        className={`d-flex justify-content-end align-items-center ${styles.navbarRight}`}
+      >
+        {windowWidth >= 1100 && (
+          <>
+            <div
+              className={` ${
+                activeLink === "Home" ? `${styles.menuItemsBackground}` : ""
+              }`}
+              onClick={() => handleActiveClicked("Home")}
+            >
+              Home
+            </div>
+            <div
+              className={` ${
+                activeLink === "About" ? `${styles.menuItemsBackground}` : ""
+              }`}
+              onClick={() => handleActiveClicked("About")}
+            >
+              About
+            </div>
+            <div
+              className={` ${
+                activeLink === "Education"
+                  ? `${styles.menuItemsBackground}`
+                  : ""
+              }`}
+              onClick={() => handleActiveClicked("Education")}
+            >
+              Education
+            </div>
+            <div
+              className={` ${
+                activeLink === "Skills" ? `${styles.menuItemsBackground}` : ""
+              }`}
+              onClick={() => handleActiveClicked("Skills")}
+            >
+              Skills
+            </div>
+            <div
+              className={` ${
+                activeLink === "Projects" ? `${styles.menuItemsBackground}` : ""
+              }`}
+              onClick={() => handleActiveClicked("Projects")}
+            >
+              Projects
+            </div>
+            <div
+              className={` ${
+                activeLink === "Contact" ? `${styles.menuItemsBackground}` : ""
+              }`}
+              onClick={() => handleActiveClicked("Contact")}
+            >
+              Contact us
+            </div>
+          </>
+        )}
+
+        {windowWidth < 1100 ? (
+          <span>
+            {toggle ? (
+              <MdClose
+                size={40}
+                onClick={handleToggle}
+                className={styles.mdIcons}
+              />
+            ) : (
+              <MdFormatAlignRight
+                size={40}
+                className={styles.mdIcons}
+                onClick={handleToggle}
+              />
+            )}
+          </span>
+        ) : (
+          <></>
+        )}
+      </div>
+    </div>
   );
 };
 
