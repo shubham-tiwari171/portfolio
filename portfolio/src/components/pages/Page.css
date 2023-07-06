@@ -24,6 +24,11 @@
   font-size: 1.2rem;
   color: #666;
 }
+.resumeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 @media (max-width: 768px) {
   .section-content {
