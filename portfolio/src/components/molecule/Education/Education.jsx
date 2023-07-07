@@ -9,8 +9,18 @@ const Education = () => {
         {data.map((edu, index) => (
           <div className="card" key={index}>
             <span className="title">{edu.qualification}</span>
-            <p className="description">{edu.collage}</p>
-            <p className="description">Year: {edu.passingYear}</p>
+            <p className="description">
+              <span style={{ fontWeight: "bold" }}>Collage :- </span>
+              {edu.collage}
+            </p>
+            <p className="description">
+              <span style={{ fontWeight: "bold" }}>Marks In % or cgpa :- </span>{" "}
+              {edu.agg}
+            </p>
+            <p className="description">
+              <span style={{ fontWeight: "bold" }}>Year :- </span>
+              {edu.passingYear}
+            </p>
           </div>
         ))}
       </div>

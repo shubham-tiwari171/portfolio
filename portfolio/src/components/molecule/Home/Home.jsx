@@ -5,8 +5,8 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="left-section">
-        <h1>Portfolio Owner Name</h1>
-        <p>Basic details about the portfolio owner</p>
+        <h1 className="animated-text">HII I AM SHUBHAM TIWARI</h1>
+        <p className="animated-text">I AM FRONTEND WEB-DEVELOPER</p>
       </div>
     </div>
   );

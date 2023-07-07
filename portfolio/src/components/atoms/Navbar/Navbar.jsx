@@ -38,7 +38,13 @@ const Navbar = ({ scrollToSection }) => {
       <div
         className={`d-flex justify-content-center align-items-center ${styles.navbarLeft}`}
       >
-        <div className={`${styles.logo}`}>PortFolio</div>
+        <div className={`${styles.logo}`}>
+          <img
+            src={"./src/assets/portfolio_logo.png"}
+            alt="Logo"
+            className={styles.logoImage}
+          />
+        </div>
         {windowWidth < 1100 && (
           <div
             className={

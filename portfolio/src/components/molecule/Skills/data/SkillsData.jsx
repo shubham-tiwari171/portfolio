@@ -11,8 +11,7 @@ export const data = [
   },
   {
     name: "Bootstrap",
-    image:
-      "https://img.freepik.com/premium-vector/bootstrap-icon-b-letter-logo_781017-7.jpg",
+    image: "https://www.drupal.org/files/project-images/bootstrap5.jpeg",
   },
   {
     name: "JavaScript",
@@ -23,5 +22,9 @@ export const data = [
   {
     name: "React",
     image: "https://mdevelopers.com/storage/2_reactheader_97879347.png",
+  },
+  {
+    name: "Redux",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png",
   },
 ];
