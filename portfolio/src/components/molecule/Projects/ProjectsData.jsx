@@ -20,7 +20,7 @@ export const data = [
     duration: "June 2023",
     overview:
       "This is a simple implementation of a Kanban Board, a tool that helps visualize and manage work. A Kanban Board is usually made of 3 columns - TODO, InProgress & Done. In each column there are Post-it notes that represents task and their status",
-    deployedLink: "https://luminous-rugelach-6b6603.netlify.app",
+    deployedLink: "https://kanban-project-tm7o.vercel.app/",
     gitLink: "",
   },
 
