@@ -1,7 +1,7 @@
 export const data = [
   {
     id: 1,
-    url: "./src/assets/twitter_clone.png",
+    url: "./twitter_clone.png",
     projectName: "TWITTER CLAONE",
     languageUsed: "Javascript",
     frameworkOrLibrary: "React",
@@ -13,7 +13,7 @@ export const data = [
   },
   {
     id: 2,
-    url: "./src/assets/kanban.jpeg",
+    url: "./kanban.jpeg",
     projectName: "KANBAN BOARD",
     languageUsed: "Javascript",
     frameworkOrLibrary: "React",
@@ -26,7 +26,7 @@ export const data = [
 
   {
     id: 3,
-    url: "./src/assets/google_doc.png",
+    url: "./google_doc.png",
     projectName: "GOOGLE DOC CLONE",
     languageUsed: "Javascript",
     frameworkOrLibrary: "React",
@@ -38,7 +38,7 @@ export const data = [
   },
   {
     id: 4,
-    url: "./src/assets/pixico.png",
+    url: "./pixico.png",
     projectName: "PIXICO ",
     languageUsed: "Javascript",
     frameworkOrLibrary: "React",
@@ -50,7 +50,7 @@ export const data = [
   },
   {
     id: 5,
-    url: "./src/assets/gy_M.png",
+    url: "./gy_M.png",
     projectName: "Gym ",
     languageUsed: "Javascript",
     frameworkOrLibrary: "React",
