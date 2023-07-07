@@ -24,7 +24,7 @@ const Resume = () => {
         <iframe
           loading="lazy"
           className="myIframeCustomClass"
-          src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFn5vJcpi4&#x2F;view?embed"
+          src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFn-x5k5Wc&#x2F;view?embed"
         ></iframe>
       </div>
     </>

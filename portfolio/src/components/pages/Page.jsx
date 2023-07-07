@@ -43,9 +43,7 @@ const Page = () => {
   };
   const handleDownloadResume = async () => {
     try {
-      const response = await axios.get(resumePDF, {
-        responseType: "blob",
-      });
+      const response = await axios.get(resumePDF, { responseType: "blob" });
       const blob = new Blob([response.data], { type: "application/pdf" });
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
