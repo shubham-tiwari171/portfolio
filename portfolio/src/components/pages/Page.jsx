@@ -15,6 +15,7 @@ const Page = () => {
   const educationRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
+  const resumeRef = useRef(null);
   const contactusRef = useRef(null);
 
   const sectionRef = {
@@ -23,6 +24,7 @@ const Page = () => {
     education: educationRef,
     skills: skillsRef,
     projects: projectsRef,
+    resume: resumeRef,
     contact: contactusRef,
   };
 
@@ -88,7 +90,7 @@ const Page = () => {
             <Projects />
           </div>
         </section>
-        <section ref={projectsRef} id="projects" className="section">
+        <section ref={resumeRef} id="projects" className="section">
           <div className="section-content">
             <div className="resumeHeader">
               <h1>Resume</h1>

@@ -10,7 +10,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  max-width: 23.4rem;
+  width: auto;
   padding: 1rem;
   background-color: #fff;
   /* border-radius: 10px; */
@@ -40,16 +40,16 @@
 
 @media (max-width: 768px) {
   .card {
-    max-width: 100%;
+    width: 100%;
   }
   .card-container {
     justify-content: center;
   }
   .title {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .description {
-    line-height: 1.2rem !important;
-    font-size: 0.4rem;
+    line-height: 1.4rem !important;
+    font-size: 0.6rem;
   }
 }

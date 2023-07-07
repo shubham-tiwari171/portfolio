@@ -81,6 +81,22 @@ const Navbar = ({ scrollToSection }) => {
             </div>
             <div
               className={` ${
+                activeLink === "Resume" ? `${styles.menuItemsBackground}` : ""
+              }`}
+              onClick={() => handleActiveClicked("Resume")}
+            >
+              Resume
+            </div>
+            <div
+              className={` ${
+                activeLink === "Contact" ? `${styles.menuItemsBackground}` : ""
+              }`}
+              onClick={() => handleActiveClicked("Contact")}
+            >
+              Contact Us
+            </div>
+            <div
+              className={` ${
                 activeLink === "Contact" ? `${styles.menuItemsBackground}` : ""
               }`}
               onClick={() => handleActiveClicked("Contact")}
@@ -140,6 +156,14 @@ const Navbar = ({ scrollToSection }) => {
               onClick={() => handleActiveClicked("Projects")}
             >
               Projects
+            </div>
+            <div
+              className={` ${
+                activeLink === "Resume" ? `${styles.menuItemsBackground}` : ""
+              }`}
+              onClick={() => handleActiveClicked("Resume")}
+            >
+              Resume
             </div>
             <div
               className={` ${

@@ -1,47 +1,18 @@
 import React from "react";
 import "./Education.css";
-
+import { data } from "./EducationData";
 const Education = () => {
   return (
     <>
       {/* <h1>Education</h1> */}
       <div className="card-container">
-        {" "}
-        <div className="card">
-          <span className="title">Cookie Notice</span>
-          <p className="description">
-            We use cookies to ensure that we give you the best experience on our
-            website.
-          </p>
-        </div>{" "}
-        <div className="card">
-          <span className="title">Cookie Notice</span>
-          <p className="description">
-            We use cookies to ensure that we give you the best experience on our
-            website.
-          </p>
-        </div>{" "}
-        <div className="card">
-          <span className="title">Cookie Notice</span>
-          <p className="description">
-            We use cookies to ensure that we give you the best experience on our
-            website.
-          </p>
-        </div>{" "}
-        <div className="card">
-          <span className="title">Cookie Notice</span>
-          <p className="description">
-            We use cookies to ensure that we give you the best experience on our
-            website.
-          </p>
-        </div>{" "}
-        <div className="card">
-          <span className="title">Cookie Notice</span>
-          <p className="description">
-            We use cookies to ensure that we give you the best experience on our
-            website.
-          </p>
-        </div>{" "}
+        {data.map((edu, index) => (
+          <div className="card" key={index}>
+            <span className="title">{edu.qualification}</span>
+            <p className="description">{edu.collage}</p>
+            <p className="description">Year: {edu.passingYear}</p>
+          </div>
+        ))}
       </div>
     </>
   );
