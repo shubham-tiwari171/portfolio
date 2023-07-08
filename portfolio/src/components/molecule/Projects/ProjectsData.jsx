@@ -9,7 +9,8 @@ export const data = [
     overview:
       "The main objective of this project was to develop an understanding of what we have learned. We successfully implemented the login and logout feature, as well as worked on protected routing to ensure secure access to certain parts of the application. Additionally, we handled the tweet section we can give like and dislike to every post",
     deployedLink: "https://legendary-crisp-0923a2.netlify.app",
-    gitLink: "",
+    gitLink:
+      "https://github.com/shubham-tiwari171/function-up-tiwtter-clone/blob/development/README.md",
   },
   {
     id: 2,
@@ -21,7 +22,8 @@ export const data = [
     overview:
       "This is a simple implementation of a Kanban Board, a tool that helps visualize and manage work. A Kanban Board is usually made of 3 columns - TODO, InProgress & Done. In each column there are Post-it notes that represents task and their status",
     deployedLink: "https://kanban-project-tm7o.vercel.app/",
-    gitLink: "",
+    gitLink:
+      "https://github.com/shubham-tiwari171/kanban-project/blob/development/README.md",
   },
 
   {
@@ -34,7 +36,8 @@ export const data = [
     overview:
       " its is a application that simplifies document creation, editing, and collaboration. We can edit our document , offline access, and integrations make it a popular choice for individuals, teams, and organizations",
     deployedLink: "",
-    gitLink: "",
+    gitLink:
+      "https://github.com/shubham-tiwari171/react/tree/google-doc-clone/my-app",
   },
   {
     id: 4,
@@ -45,8 +48,8 @@ export const data = [
     duration: "June 2023",
     overview:
       "Pixico is a popular online platform for free high-quality images. It offers a vast collection of visually stunning picture. With it's user-friendly interface. It provides easy access to a wide range of visually appealing images for personal or commercial use. We can download images and upload images as well and create or ownseperate board categories image.",
-    deployedLink: "",
-    gitLink: "",
+    deployedLink: "https://gallery-lac-five.vercel.app",
+    gitLink: "https://github.com/shubham-tiwari171/gallery",
   },
   {
     id: 5,
@@ -58,6 +61,6 @@ export const data = [
     Overview: "",
 
     deployedLink: "https://prismatic-sunburst-318848.netlify.app",
-    gitLink: "",
+    gitLink: "https://github.com/shubham-tiwari171/gym/tree/main/gym-app",
   },
 ];
