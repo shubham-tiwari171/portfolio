@@ -67,7 +67,7 @@ const Page = () => {
         </section>
         <section ref={aboutRef} id="about" className="section">
           <div className="section-content">
-            <h1>About Us</h1>
+            <h1>About</h1>
             <About />
           </div>
         </section>
