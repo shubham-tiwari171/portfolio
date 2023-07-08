@@ -101,14 +101,7 @@ const Navbar = ({ scrollToSection }) => {
             >
               Contact Us
             </div>
-            <div
-              className={` ${
-                activeLink === "Contact" ? `${styles.menuItemsBackground}` : ""
-              }`}
-              onClick={() => handleActiveClicked("Contact")}
-            >
-              Contact Us
-            </div>
+
             {/* <div>
               <button className={`${styles.joinButton}`}>Join</button>
             </div> */}

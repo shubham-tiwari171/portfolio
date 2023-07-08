@@ -101,7 +101,9 @@
     background-size: cover;
     background-position: center;
     padding: 0.7rem;
-    /* border: 1px solid red; */
+
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+    transition: height 0.25s ease-in-out;
   }
 
   .navbarLeft {
