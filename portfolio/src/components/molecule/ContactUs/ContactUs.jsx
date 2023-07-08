@@ -90,8 +90,8 @@ const ContactUs = () => {
           {snackbarMessage}
         </MuiAlert>
       </Snackbar>
-      <div class="container contact-form">
-        <div class="contact-image">
+      <div className="container contact-form">
+        <div className="contact-image">
           <img
             src="https://image.ibb.co/kUagtU/rocket_contact.png"
             alt="rocket_contact"
@@ -99,9 +99,9 @@ const ContactUs = () => {
         </div>
         <form ref={form} onSubmit={handleSubmit}>
           <h3>Drop a Message</h3>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
+          <div className="row">
+            <div className="col-md-6">
+              <div className="form-group">
                 <TextField
                   label="Name"
                   name="user_name"
@@ -111,7 +111,7 @@ const ContactUs = () => {
                   onChange={(e) => setName(e.target.value)}
                 />
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <TextField
                   label="Email"
                   name="user_email"
@@ -122,8 +122,8 @@ const ContactUs = () => {
                 />
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="form-group">
+            <div className="col-md-6">
+              <div className="form-group">
                 <TextField
                   label="Message"
                   name="message"
@@ -136,7 +136,7 @@ const ContactUs = () => {
                 />
               </div>
             </div>
-            <div class=" col-md-12">
+            <div className=" col-md-12">
               <Button
                 type="submit"
                 variant="contained"

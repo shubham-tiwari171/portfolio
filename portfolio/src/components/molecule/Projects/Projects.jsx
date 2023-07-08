@@ -9,7 +9,7 @@ const Projects = () => {
         {data.map((project, index) => (
           <div className="project-card" key={project.id}>
             <div className="project-tumb">
-              <img src={project.url} alt="" />
+              <img src={project.url} alt={"project.projectName"} />
             </div>
             <div className="project-details">
               <h4>

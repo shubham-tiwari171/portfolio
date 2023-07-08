@@ -40,7 +40,7 @@ const Navbar = ({ scrollToSection }) => {
       >
         <div className={`${styles.logo}`}>
           <img
-            src={"./src/assets/portfolio_logo.png"}
+            src={"./portfolio_logo.png"}
             alt="Logo"
             className={styles.logoImage}
           />
