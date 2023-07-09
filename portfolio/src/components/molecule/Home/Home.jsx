@@ -8,7 +8,7 @@ const Home = () => {
       <div className="left-section">
         <h1 className="animated-text continuous-animation">SHUBHAM TIWARI</h1>
         <p className="animated-text continuous-animation  ">
-          I AM FRONTEND WEB-DEVELOPER
+          FRONTEND WEB-DEVELOPER
         </p>
       </div>
     </div>
