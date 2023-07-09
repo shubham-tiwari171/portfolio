@@ -22,7 +22,7 @@
   height: 100%;
   color: black;
   font-size: x-large;
-  margin-right: 4rem;
+  margin-right: 2rem;
   cursor: pointer;
 }
 
@@ -129,5 +129,8 @@
   }
   .logoImage {
     margin-right: 5rem;
+  }
+  .navbarRight {
+    margin-right: 2rem;
   }
 }

@@ -4,9 +4,12 @@ import "./Home.css"; // Assuming you have a separate CSS file for styling
 const Home = () => {
   return (
     <div className="home-container">
+      <div className="overlay"></div> {/* Add an overlay element */}
       <div className="left-section">
-        <h1 className="animated-text">HII I AM SHUBHAM TIWARI</h1>
-        <p className="animated-text">I AM FRONTEND WEB-DEVELOPER</p>
+        <h1 className="animated-text continuous-animation">SHUBHAM TIWARI</h1>
+        <p className="animated-text continuous-animation  ">
+          I AM FRONTEND WEB-DEVELOPER
+        </p>
       </div>
     </div>
   );
