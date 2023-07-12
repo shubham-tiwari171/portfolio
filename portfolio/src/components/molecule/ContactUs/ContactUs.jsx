@@ -23,8 +23,87 @@ const ContactUs = () => {
     severity: "warning",
   });
   const form = useRef();
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   // Send email using EmailJS
+  //   emailjs
+  //     .sendForm(
+  //       "service_n6zyp46",
+  //       "template_zgherpv",
+  //       form.current,
+  //       "y1YOnvabtI8H2yk5c"
+  //     )
+  //     .then((result) => {
+  //       // console.log("Email sent successfully:", result.text);
+  //       setOpenSnackbar((prevState) => ({
+  //         ...prevState,
+  //         open: true,
+  //         severity: "success",
+  //       }));
+  //       setSnackbarMessage("Email sent successfully");
+  //       // Display success message or perform any other actions
+  //     })
+  //     .catch((error) => {
+  //       setOpenSnackbar((prevState) => ({
+  //         ...prevState,
+  //         open: true,
+  //         severity: "error",
+  //       }));
+  //       setSnackbarMessage("Error sending email");
+  //       // console.error("Error sending email:", error.text);
+  //       // Display error message or perform any other actions
+  //     });
+
+  //   // Clear form fields after submission
+  //   setName("");
+  //   setEmail("");
+  //   setMessage("");
+  // };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Basic form field validations
+    if (name.trim() === "") {
+      setOpenSnackbar((prevState) => ({
+        ...prevState,
+        open: true,
+        severity: "error",
+      }));
+      setSnackbarMessage("Please enter your name");
+      return;
+    }
+
+    if (email.trim() === "") {
+      setOpenSnackbar((prevState) => ({
+        ...prevState,
+        open: true,
+        severity: "error",
+      }));
+      setSnackbarMessage("Please enter your email");
+      return;
+    }
+
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+      setOpenSnackbar((prevState) => ({
+        ...prevState,
+        open: true,
+        severity: "error",
+      }));
+      setSnackbarMessage("Please enter a valid email address");
+      return;
+    }
+
+    if (message.trim() === "") {
+      setOpenSnackbar((prevState) => ({
+        ...prevState,
+        open: true,
+        severity: "error",
+      }));
+      setSnackbarMessage("Please enter a message");
+      return;
+    }
 
     // Send email using EmailJS
     emailjs
@@ -35,7 +114,6 @@ const ContactUs = () => {
         "y1YOnvabtI8H2yk5c"
       )
       .then((result) => {
-        // console.log("Email sent successfully:", result.text);
         setOpenSnackbar((prevState) => ({
           ...prevState,
           open: true,
@@ -51,7 +129,6 @@ const ContactUs = () => {
           severity: "error",
         }));
         setSnackbarMessage("Error sending email");
-        // console.error("Error sending email:", error.text);
         // Display error message or perform any other actions
       });
 
@@ -60,6 +137,13 @@ const ContactUs = () => {
     setEmail("");
     setMessage("");
   };
+  // const handleSnackbarClose = () => {
+  //   setOpenSnackbar((prevState) => ({
+  //     ...prevState,
+  //     open: false,
+  //   }));
+  //   setSnackbarMessage("");
+  // };
 
   const handleSnackbarClose = () => {
     setOpenSnackbar((prevState) => ({
